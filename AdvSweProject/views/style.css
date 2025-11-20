@@ -1,0 +1,82 @@
+/* Page background */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff; /* white background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Grey box container for form */
+.container {
+    background-color: #f2f2f2; /* light grey box */
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 360px;
+    max-width: 90%;
+    text-align: center;
+}
+
+/* Heading */
+.container h2 {
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Inputs and selects */
+.container input, .container select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Main form submit buttons (inside the form) */
+.container form button {
+    background-color: #4CAF50; /* green */
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.container form button:hover {
+    background-color: #45a049;
+    transform: scale(1.02);
+}
+
+/* Toggle buttons (outside the form) */
+.container .toggle-btn {
+    background-color: #2196F3; /* blue */
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: white;
+    margin-top: 20px; /* adds space above toggle button */
+}
+
+.container .toggle-btn:hover {
+    background-color: #1976D2;
+    transform: scale(1.02);
+}
+
+/* Error messages */
+.error {
+    color: red;
+    margin-bottom: 10px;
+}
