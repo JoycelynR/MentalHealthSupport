@@ -1,2 +1,21 @@
-# MentalHealthSupport
-The Mental Health Support System is a group project for the Software Engineering class 5322. This application will allow users to sign in a take tests for mental assesments, request help, make appointments with doctors, and recieve improvement suggestments
+# Folder Structure
+AdvSweProject/
+│
+├── includes/
+│   └── db.php                 # Database connection
+│
+├── views/
+│   ├── header.php             # Optional site header (HTML head, CSS links)
+│   ├── footer.php             # Optional footer
+│   ├── register.php           # Registration form
+│   ├── login.php              # Login form
+│
+├── auth/
+│   ├── register_process.php   # PHP script handling registration
+│   ├── login_process.php      # PHP script handling login
+│   └── logout.php             # Logout script (destroy session)
+│
+├── css/
+│   └── style.css              # CSS for login/register forms
+│
+└── index.php  
