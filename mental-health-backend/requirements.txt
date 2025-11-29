@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+sqlalchemy
+pyodbc
+pymysql
+cryptography
+passlib[bcrypt] 
+python-jose[cryptography] 
+fastapi-login
