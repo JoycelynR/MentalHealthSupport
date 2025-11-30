@@ -1,6 +1,10 @@
 from fastapi import FastAPI
 from database import Base, engine
 from fastapi.middleware.cors import CORSMiddleware
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 from routers import (
     user_routes,
