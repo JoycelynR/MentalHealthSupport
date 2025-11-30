@@ -75,27 +75,35 @@ export default function DoctorDashboard() {
   // Save Notes
   // ------------------------------------------------------
   const saveNote = async (consultationId) => {
-    try {
-      const res = await fetch(`${apiUrl}/consultations/${consultationId}/notes`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({ notes: newNote }),
-      });
+  console.log("Saving note for consultation:", consultationId);
+  console.log("Note content:", newNote);
+  
+  try {
+    const res = await fetch(`${apiUrl}/consultations/${consultationId}/notes`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify({ notes: newNote }),
+    });
 
-      if (res.ok) {
-        alert("Note saved successfully!");
-        setNewNote("");
-        fetchConsultations();
-      } else {
-        alert("Failed to save note.");
-      }
-    } catch (err) {
-      console.error(err);
+    console.log("Response status:", res.status);
+    const data = await res.json();
+    console.log("Response data:", data);
+
+    if (res.ok) {
+      alert("Note saved successfully!");
+      setNewNote("");
+      fetchConsultations();
+    } else {
+      alert("Failed to save note. Check console for details.");
     }
-  };
+  } catch (err) {
+    console.error("Error saving note:", err);
+    alert("Error: " + err.message);
+  }
+};
 
   // ------------------------------------------------------
   // Add Prescription

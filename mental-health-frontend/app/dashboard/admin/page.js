@@ -188,7 +188,6 @@ export default function AdminDashboard() {
           <div key={d.id} className="bg-white/70 p-4 rounded shadow mb-3">
             <p><strong>Name:</strong> {d.name}</p>
             <p><strong>Email:</strong> {d.email}</p>
-            <p><strong>Specialization:</strong> {d.specialization}</p>
           </div>
         ))}
       </AdminSection>
