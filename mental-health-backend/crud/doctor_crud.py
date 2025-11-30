@@ -16,7 +16,6 @@ def create_doctor(db: Session, doctor: DoctorCreate):
 
     # 2. Create doctor row linked to user
     new_doctor = Doctor(
-        user_id=user.id,
         name=doctor.name,
         email=doctor.email,
         password=doctor.password,
